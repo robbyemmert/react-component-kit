@@ -27,6 +27,9 @@ module.exports = {
                             }
                         },
                         {
+                            loader: 'postcss-loader'
+                        },
+                        {
                             loader: 'sass-loader',
                             options: {
                                 includePaths: [path.resolve(__dirname, "./lib")]
