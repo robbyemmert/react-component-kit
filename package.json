@@ -1,0 +1,27 @@
+{
+  "name": "react-component-kit",
+  "version": "1.0.0",
+  "description": "A kit for building React components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/robbyemmert/react-component-kit.git"
+  },
+  "keywords": [
+    "React",
+    "Typescript",
+    "Sass",
+    "Component",
+    "Starter",
+    "Kit"
+  ],
+  "author": "Robby Emmert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robbyemmert/react-component-kit/issues"
+  },
+  "homepage": "https://github.com/robbyemmert/react-component-kit#readme"
+}
