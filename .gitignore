@@ -1,0 +1,9 @@
+# Dev Configuration
+.vscode
+.env
+
+# Node
+node_modules
+
+# Generated files
+dist
