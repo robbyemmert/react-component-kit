@@ -1,12 +1,15 @@
 {
     "compilerOptions": {
         "outDir": "./dist/",
+        "rootDir": "./",
         "noImplicitAny": false,
         "module": "es6",
         "target": "es5",
         "jsx": "react",
         "sourceMap": true,
         "declaration": true,
-        "declarationDir": "./"
+        "declarationDir": "./",
+        "moduleResolution": "node",
+        "experimentalDecorators": true
     }
 }

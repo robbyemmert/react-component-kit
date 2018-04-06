@@ -7,6 +7,9 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
     libRoot: resolveApp('lib/index.ts'),
+    exampleRoot: resolveApp('example'),
+    exampleOutputDirectory: resolveApp('example-dist'),
     outputDirectory: resolveApp('dist'),
-    dotEnvFile: resolveApp('.env')
+    dotEnvFile: resolveApp('.env'),
+    exampleHtmlTemplate: resolveApp('example/index.html')
 }
