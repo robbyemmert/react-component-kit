@@ -1,4 +1,7 @@
-const serve = require('webpack-serve')
+const webpack = require('webpack')
+const webpackMiddleware = require('webpack-dev-middleware')
+const webpackHotMiddleware = require('webpack-hot-middleware')
+const express = require('express')
 
 const webpackConfig = require('../config/webpack.config.dev')
 const paths = require('../config/paths')
@@ -17,11 +20,13 @@ const config = {
 
 console.log('Starting dev server...')
 
-serve({ config })
-.then(server => server.on('listening', () => {
-    console.log(`Webpack Dev Server running at http://${settings.devServerHost}:${settings.devServerPort}`)
-    if(settings.clipboard) {
-        console.log('Copied the URL to the clipboard')
-    }
+const compiler = webpack(config)
+const server = express()
+server.use(webpackMiddleware(compiler, {
+    ...webpackConfig
 }))
-.catch(error => console.error('There was an error starting the server', error))
+server.use(webpackHotMiddleware(compiler))
+
+server.listen(settings.devServerPort, settings.devServerHost, () => {
+    console.log(`Webpack Dev Server running at http://${settings.devServerHost}:${settings.devServerPort}`)
+})

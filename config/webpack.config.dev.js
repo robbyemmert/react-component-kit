@@ -7,7 +7,10 @@ const settings = require('./settings')
 const package = require('../package.json')
 
 module.exports = {
-    entry: paths.exampleRoot,
+    entry: [
+        paths.exampleRoot,
+        'webpack-hot-middleware/client?reload=true'
+    ],
     devtool: 'inline-source-map',
     stats: 'normal',
     module: {
@@ -56,7 +59,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'example/index.html'
-        })
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ],
     resolve: {
         extensions: settings.supportedExtensions,

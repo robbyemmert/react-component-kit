@@ -2,14 +2,18 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "rootDir": "./",
+        "baseUrl": ".",
         "noImplicitAny": false,
-        "module": "es6",
+        "module": "esnext",
         "target": "es5",
         "jsx": "react",
         "sourceMap": true,
         "declaration": true,
         "declarationDir": "./",
         "moduleResolution": "node",
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "paths": {
+            "react-component-kit": [ "lib" ]
+        }
     }
 }

@@ -1,3 +1,5 @@
+const paths = require('./paths')
+
 exports.supportedExtensions = [
     '.tsx',
     '.ts',
@@ -13,10 +15,13 @@ exports.fileNames = {
 }
 
 exports.devServerSettings = {
-    open: true,
-    host: 'localhost',
-    port: 8080,
-    hot: true
+    hot: true,
+    publicPath: paths.exampleRoot,
+    stats: { color: true },
+    inline: true,
+    historyApiFallback: {
+        disableDotRule: true
+    }
 }
 
 exports.devServerPort = 8080
