@@ -12,8 +12,11 @@
         "declarationDir": "./",
         "moduleResolution": "node",
         "experimentalDecorators": true,
+        "lib": [
+            "es6"
+        ],
         "paths": {
-            "react-component-kit": [ "lib" ]
+            "redux-controller": [ "lib" ]
         }
     }
 }

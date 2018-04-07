@@ -1,33 +1,33 @@
 {
-  "name": "react-component-kit",
+  "name": "redux-controller",
   "version": "1.0.0",
   "description": "A kit for building React components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./scripts/run-tests.js",
     "start": "node ./scripts/dev.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/robbyemmert/react-component-kit.git"
+    "url": "git+ssh://git@github.com/robbyemmert/redux-controller.git"
   },
   "keywords": [
-    "React",
-    "Typescript",
-    "Sass",
-    "Component",
-    "Starter",
-    "Kit"
+    "Redux",
+    "Controller",
+    "Object Oriented",
+    "Reusable",
+    "Modular"
   ],
   "author": "Robby Emmert",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/robbyemmert/react-component-kit/issues"
+    "url": "https://github.com/robbyemmert/redux-controller/issues"
   },
-  "homepage": "https://github.com/robbyemmert/react-component-kit#readme",
+  "homepage": "https://github.com/robbyemmert/redux-controller#readme",
   "devDependencies": {
+    "@types/jest": "^22.2.2",
     "autoprefixer": "^8.2.0",
     "css-loader": "^0.28.11",
     "dotenv": "^5.0.1",
@@ -35,6 +35,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^22.4.3",
     "node-sass": "^4.8.3",
     "postcss-loader": "^2.1.3",
     "react": "^16.3.1",
@@ -42,6 +43,7 @@
     "react-utils": "^1.0.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "ts-jest": "^22.4.2",
     "ts-loader": "^4.1.0",
     "typescript": "^2.8.1",
     "uglifyjs-webpack-plugin": "^1.2.4",
@@ -50,5 +52,22 @@
     "webpack-hot-middleware": "^2.21.2",
     "webpack-serve": "^0.3.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
 }
